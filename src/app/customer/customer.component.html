@@ -1,0 +1,16 @@
+<h1 class="text-primary">Customers </h1>
+<div *ngFor="let c of customers.result">
+  <div class="panel">
+    <div class="panel-header">
+      {{c.name}}
+    </div>
+
+    <div class="panel-body">
+      {{c.cnp}}
+    </div>
+
+    <a href="/edit-customer/{{c.id}}" class="btn btn-success">Edit</a>
+
+    <button (click)="deleteCustomer(c.id)" class="btn btn-primary">Delete</button>
+  </div>
+</div>

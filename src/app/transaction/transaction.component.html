@@ -1,0 +1,17 @@
+<h1 class="text-primary">Transactions</h1>
+
+<div *ngFor="let t of transactions.result">
+  <div class="panel">
+    <div class="panel-header">
+      {{t.id}}
+    </div>
+
+    <div class="panel-body">
+      {{t.customerId}} {{t.amount}}
+    </div>
+
+    <a href="/edit-transaction/{{t.id}}" class="btn btn-success">Edit Transactions</a>
+
+    <button (click)="deleteTransaction(t.id)" class="btn btn-primary">Delete</button>
+  </div>
+</div>
